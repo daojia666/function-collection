@@ -1,0 +1,15 @@
+//获取年月日和星期几
+takeTime () {
+                //先引入moment代码包
+                let now = Date.now();
+                this.toDay = moment(now).format('YYYY年MM月DD日');
+                this.nowTime = moment(now).format('HH:mm:ss');
+                let weekObject = {
+                    Monday: '一',
+                    Tuesday: '二',
+                    Wednesday: '三',
+                    Thursday: '四',
+                    Friday: '五',
+                }
+                this.weekDay = '星期' + weekObject[moment(now).format('dddd')];
+            },
